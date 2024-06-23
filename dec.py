@@ -1,4 +1,7 @@
 #!/usr/bin/python
+# created by chrisjd20 (https://github.com/chrisjd20/hikvision_CVE-2017-7921_auth_bypass_config_decryptor)
+# and modified by Alexandre C. Leite to show only password in output
+
 from itertools import cycle
 from Crypto.Cipher import AES
 import re
@@ -31,7 +34,7 @@ def strings(file):
 
 def main():
     if len(sys.argv) <= 1 or not os.path.isfile(sys.argv[1]):
-        return print(f'No valid config file provided to decrypt. For example:\n{sys.argv[0]} <configfile>')
+        return print(f'Arquivo de configuracao invalido. Use:\n{sys.argv[0]} <configurationFile>')
     xor = xore( decrypt(open( sys.argv[1],'rb').read()) )
     result_list = strings(xor.decode('ISO-8859-1'))
     texto = str(result_list)
