@@ -1,4 +1,6 @@
+# Script original by Crhisjd20 ( https://github.com/chrisjd20/hikvision_CVE-2017-7921_auth_bypass_config_decryptor )
 # hikvision_CVE-2017-7921_auth_bypass_config_decryptor
+
 Este script Python decodifica o arquivo de configuração de câmeras Hikvision suscetíveis a vulnerabilidade exposta no CVE-2017-7921.
 (https://www.checkpoint.com/defense/advisories/public/2017/cpai-2017-0876.html/)
 
@@ -16,7 +18,7 @@ Também forneço um arquivo de configuração de exemplo gerado para você testa
 
 # Como utilizar:
 
-`./dec.py <nome_do_arquivo_baixado_da_camera>`
+`python3 dec.py <nome_do_arquivo_baixado_da_camera>`
 
 
 # Dependencias:
